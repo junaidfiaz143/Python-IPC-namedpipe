@@ -1,0 +1,5 @@
+wmic service TestService get PathName
+
+taskkill /F /T /FI "SERVICES eq TestService"
+
+python detection_service.py --interactive --startup auto install
